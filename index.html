@@ -387,9 +387,7 @@
 
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/E-Book.github.io/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    $('.bg-cover').css('background-image', 'url(/E-Book.github.io/medias/banner/0.jpg)');
 </script>
 
 
@@ -492,6 +490,16 @@
         };
 
         
+        // prev and next cover post.
+        $('#prev-cover').click(function () {
+            coverSlider.carousel('prev');
+            restartPlay();
+        });
+        $('#next-cover').click(function () {
+            coverSlider.carousel('next');
+            restartPlay();
+        });
+        
     });
 </script>
 
@@ -560,8 +568,8 @@
     <div class="row">
         <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
                    server="kugou"
-                   type="search[p]"
-                   id="落差"
+                   type="song"
+                   id="e1f4741d85cfa963977f958e1009fc11&album_id=174934011"
                    fixed='false'
                    autoplay='false'
                    theme='#42b983'
